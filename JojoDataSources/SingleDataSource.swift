@@ -16,7 +16,7 @@ enum DataSourceState {
 }
 
 
-public class SingleDataSource<CellElement: UITableViewCell, ModelElement>: NSObject, UITableViewDataSource, UITableViewDelegate {
+public class SingleDataSource<CellElement: UITableViewCell, ModelElement>: NSObject, UITableViewDataSource, UITableViewDelegate, MessageStateDelegate {
     
     private var models: [ModelElement]
     public var didSelectRow: ((ModelElement, CellElement) -> Void)?
@@ -34,16 +34,16 @@ public class SingleDataSource<CellElement: UITableViewCell, ModelElement>: NSObj
                 return
             }
 
-//            switch currentState {
-//                case .Empty:
-//                    tableView.emptyDataSetSource = EmptyStateDataSet(withTitle: "No data found", image: nil) // TODO: Set image
-//                case .Error:
-//                    tableView.emptyDataSetSource = ErrorStateDataSet(withTitle: "Something went wrong",
-//                                                                 image: nil,
-//                                                                 buttonTitle: "Tap to retry")
-//                default:
-//                    tableView.emptyDataSetSource = nil
-//            }
+            switch currentState {
+                case .Empty:
+                    tableView.backgroundView = MessageStateView(withMessage: "No entries found, oops.", messageImage: nil, delegate: self)
+                case .Error:
+                    tableView.backgroundView = MessageStateView(withMessage: "Error happened, we couldn't reach the server", messageImage: nil, delegate: self)
+                case .Loading:
+                    tableView.backgroundView = LoadingIndicator(withTitle: "Loading...")
+                default:
+                    tableView.backgroundView = nil
+            }
         }
     }
     
@@ -92,7 +92,12 @@ public class SingleDataSource<CellElement: UITableViewCell, ModelElement>: NSObj
         })
     }
 
-    //Mark: TableView Data Source
+    // Mark: Message state delegate
+    func retry() {
+        loadData()
+    }
+
+    // Mark: TableView Data Source
     
     public func numberOfSections(in tableView: UITableView) -> Int {
         return 1

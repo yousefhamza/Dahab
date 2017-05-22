@@ -7,14 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		246C8B611ED30D3A009953E0 /* MessageStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C8B601ED30D3A009953E0 /* MessageStateView.swift */; };
 		24DB54301ED3065C00037F14 /* JojoDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DB54261ED3065C00037F14 /* JojoDataSources.framework */; };
 		24DB54351ED3065C00037F14 /* JojoDataSourcesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB54341ED3065C00037F14 /* JojoDataSourcesTests.swift */; };
 		24DB54371ED3065C00037F14 /* JojoDataSources.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DB54291ED3065C00037F14 /* JojoDataSources.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24DB54431ED3068600037F14 /* SingleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB54411ED3068600037F14 /* SingleDataSource.swift */; };
 		24DB54441ED3068600037F14 /* CollectionSingleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB54421ED3068600037F14 /* CollectionSingleDataSource.swift */; };
+		24DB54591ED3085A00037F14 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB54581ED3085A00037F14 /* LoadingIndicator.swift */; };
+		3C6890E27B9676F4E8442E05 /* Pods_JojoDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C29364BF6D5D669388BD4EE /* Pods_JojoDataSources.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		246C8B4C1ED309F6009953E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 246C8B471ED309F6009953E0 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F7C27490E930B969EABD4AB37F37CC58;
+			remoteInfo = "Pods-JojoDataSources";
+		};
+		246C8B4E1ED309F6009953E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 246C8B471ED309F6009953E0 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 465E108A511D035A23EF17D7E4D6576F;
+			remoteInfo = SnapKit;
+		};
 		24DB54311ED3065C00037F14 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24DB541D1ED3065C00037F14 /* Project object */;
@@ -25,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C29364BF6D5D669388BD4EE /* Pods_JojoDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JojoDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		246C8B471ED309F6009953E0 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		246C8B601ED30D3A009953E0 /* MessageStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageStateView.swift; sourceTree = "<group>"; };
 		24DB54261ED3065C00037F14 /* JojoDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JojoDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DB54291ED3065C00037F14 /* JojoDataSources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JojoDataSources.h; sourceTree = "<group>"; };
 		24DB542A1ED3065C00037F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +53,9 @@
 		24DB54361ED3065C00037F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DB54411ED3068600037F14 /* SingleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleDataSource.swift; sourceTree = "<group>"; };
 		24DB54421ED3068600037F14 /* CollectionSingleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionSingleDataSource.swift; sourceTree = "<group>"; };
+		24DB54581ED3085A00037F14 /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		2AC02A627CD92B34042BC3D3 /* Pods-JojoDataSources.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JojoDataSources.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JojoDataSources/Pods-JojoDataSources.debug.xcconfig"; sourceTree = "<group>"; };
+		8B740A12E6167666AC163415 /* Pods-JojoDataSources.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JojoDataSources.release.xcconfig"; path = "Pods/Target Support Files/Pods-JojoDataSources/Pods-JojoDataSources.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6890E27B9676F4E8442E05 /* Pods_JojoDataSources.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +78,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		246C8B481ED309F6009953E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				246C8B4D1ED309F6009953E0 /* Pods_JojoDataSources.framework */,
+				246C8B4F1ED309F6009953E0 /* SnapKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		249A97D9544998A3A5B9484C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2AC02A627CD92B34042BC3D3 /* Pods-JojoDataSources.debug.xcconfig */,
+				8B740A12E6167666AC163415 /* Pods-JojoDataSources.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		24DB541C1ED3065C00037F14 = {
 			isa = PBXGroup;
 			children = (
+				246C8B471ED309F6009953E0 /* Pods.xcodeproj */,
 				24DB54281ED3065C00037F14 /* JojoDataSources */,
 				24DB54331ED3065C00037F14 /* JojoDataSourcesTests */,
 				24DB54271ED3065C00037F14 /* Products */,
+				249A97D9544998A3A5B9484C /* Pods */,
+				D9E8AD52A7B5EDE758BB0148 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +120,7 @@
 		24DB54281ED3065C00037F14 /* JojoDataSources */ = {
 			isa = PBXGroup;
 			children = (
+				24DB54571ED3083500037F14 /* Views */,
 				24DB54401ED3067100037F14 /* Data sources */,
 				24DB54291ED3065C00037F14 /* JojoDataSources.h */,
 				24DB542A1ED3065C00037F14 /* Info.plist */,
@@ -100,6 +146,23 @@
 			name = "Data sources";
 			sourceTree = "<group>";
 		};
+		24DB54571ED3083500037F14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24DB54581ED3085A00037F14 /* LoadingIndicator.swift */,
+				246C8B601ED30D3A009953E0 /* MessageStateView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D9E8AD52A7B5EDE758BB0148 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C29364BF6D5D669388BD4EE /* Pods_JojoDataSources.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -118,10 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24DB543A1ED3065C00037F14 /* Build configuration list for PBXNativeTarget "JojoDataSources" */;
 			buildPhases = (
+				923ACA64686B92A172B733EA /* [CP] Check Pods Manifest.lock */,
 				24DB54211ED3065C00037F14 /* Sources */,
 				24DB54221ED3065C00037F14 /* Frameworks */,
 				24DB54231ED3065C00037F14 /* Headers */,
 				24DB54241ED3065C00037F14 /* Resources */,
+				80CFE3AFB9BB6078F90BA76C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,6 +248,12 @@
 			mainGroup = 24DB541C1ED3065C00037F14;
 			productRefGroup = 24DB54271ED3065C00037F14 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 246C8B481ED309F6009953E0 /* Products */;
+					ProjectRef = 246C8B471ED309F6009953E0 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				24DB54251ED3065C00037F14 /* JojoDataSources */,
@@ -190,6 +261,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		246C8B4D1ED309F6009953E0 /* Pods_JojoDataSources.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_JojoDataSources.framework;
+			remoteRef = 246C8B4C1ED309F6009953E0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		246C8B4F1ED309F6009953E0 /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = 246C8B4E1ED309F6009953E0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		24DB54241ED3065C00037F14 /* Resources */ = {
@@ -208,12 +296,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		80CFE3AFB9BB6078F90BA76C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JojoDataSources/Pods-JojoDataSources-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		923ACA64686B92A172B733EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		24DB54211ED3065C00037F14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DB54591ED3085A00037F14 /* LoadingIndicator.swift in Sources */,
 				24DB54441ED3068600037F14 /* CollectionSingleDataSource.swift in Sources */,
+				246C8B611ED30D3A009953E0 /* MessageStateView.swift in Sources */,
 				24DB54431ED3068600037F14 /* SingleDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +463,7 @@
 		};
 		24DB543B1ED3065C00037F14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AC02A627CD92B34042BC3D3 /* Pods-JojoDataSources.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -362,6 +486,7 @@
 		};
 		24DB543C1ED3065C00037F14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B740A12E6167666AC163415 /* Pods-JojoDataSources.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";

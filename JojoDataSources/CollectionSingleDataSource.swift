@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CollectionSingleDataSource<CellElement: UICollectionViewCell, ModelElement>: NSObject, UICollectionViewDataSource, UICollectionViewDelegate {
+public class CollectionSingleDataSource<CellElement: UICollectionViewCell, ModelElement>: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, MessageStateDelegate {
     
     private var models: [ModelElement]
     public var didSelectRow: ((ModelElement) -> Void)?
@@ -26,16 +26,16 @@ public class CollectionSingleDataSource<CellElement: UICollectionViewCell, Model
                 return
             }
             
-            //            switch currentState {
-            //                case .Empty:
-            //                    tableView.emptyDataSetSource = EmptyStateDataSet(withTitle: "No data found", image: nil) // TODO: Set image
-            //                case .Error:
-            //                    tableView.emptyDataSetSource = ErrorStateDataSet(withTitle: "Something went wrong",
-            //                                                                 image: nil,
-            //                                                                 buttonTitle: "Tap to retry")
-            //                default:
-            //                    tableView.emptyDataSetSource = nil
-            //            }
+            switch currentState {
+            case .Empty:
+                collectionView.backgroundView = MessageStateView(withMessage: "No entries found", messageImage: nil, delegate: self)
+            case .Error:
+                collectionView.backgroundView = MessageStateView(withMessage: "Error happened, we couldn't reach the server", messageImage: nil, delegate: self)
+            case .Loading:
+                collectionView.backgroundView = LoadingIndicator(withTitle: "Loading...")
+            default:
+                collectionView.backgroundView = nil
+            }
         }
     }
     
@@ -45,8 +45,6 @@ public class CollectionSingleDataSource<CellElement: UICollectionViewCell, Model
         models = []
         
         super.init()
-//        self.tableView.rowHeight = UITableViewAutomaticDimension
-//        self.tableView.separatorColor = UIColor.clear
     }
     
     //Mark: Public
@@ -82,6 +80,11 @@ public class CollectionSingleDataSource<CellElement: UICollectionViewCell, Model
             self.models = []
             self.collectionView.reloadData()
         })
+    }
+
+    // Mark: Message state delegate
+    func retry() {
+        loadData()
     }
     
     //Mark: TableView Data Source
