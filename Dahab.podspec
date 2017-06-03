@@ -9,5 +9,5 @@ Pod::Spec.new do |s|
   s.source        = { :git => "https://github.com/yousefhamza/Dahab.git", :tag => "#{s.version}" }
   s.source_files  = "Dahab"
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3' }
-  s.dependency "Snapkit", "~> 3.2.0"
+  s.dependency "SnapKit", "~> 3.2.0"
 end
