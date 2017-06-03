@@ -28,7 +28,7 @@ public class CollectionSingleDataSource<CellElement: UICollectionViewCell, Model
             
             switch currentState {
             case .Empty:
-                collectionView.backgroundView = MessageStateView(withMessage: "No entries found", messageImage: nil, delegate: self)
+                collectionView.backgroundView = MessageStateView(withMessage: "No entries found.", messageImage: nil, delegate: self)
             case .Error:
                 collectionView.backgroundView = MessageStateView(withMessage: "Error happened, we couldn't reach the server", messageImage: nil, delegate: self)
             case .Loading:

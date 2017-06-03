@@ -36,7 +36,7 @@ public class SingleDataSource<CellElement: UITableViewCell, ModelElement>: NSObj
 
             switch currentState {
                 case .Empty:
-                    tableView.backgroundView = MessageStateView(withMessage: "No entries found, oops.", messageImage: nil, delegate: self)
+                    tableView.backgroundView = MessageStateView(withMessage: "No entries found.", messageImage: nil, delegate: self)
                 case .Error:
                     tableView.backgroundView = MessageStateView(withMessage: "Error happened, we couldn't reach the server", messageImage: nil, delegate: self)
                 case .Loading:

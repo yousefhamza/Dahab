@@ -14,6 +14,7 @@ class LoadingIndicator: UIView {
         let label = UILabel()
         label.textAlignment = .center
         label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
