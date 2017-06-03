@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "24DB54251ED3065C00037F14"
-               BuildableName = "JojoDataSources.framework"
-               BlueprintName = "JojoDataSources"
-               ReferencedContainer = "container:JojoDataSources.xcodeproj">
+               BuildableName = "Dahab.framework"
+               BlueprintName = "Dahab"
+               ReferencedContainer = "container:Dahab.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "24DB542E1ED3065C00037F14"
-               BuildableName = "JojoDataSourcesTests.xctest"
-               BlueprintName = "JojoDataSourcesTests"
-               ReferencedContainer = "container:JojoDataSources.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "24DB54251ED3065C00037F14"
-            BuildableName = "JojoDataSources.framework"
-            BlueprintName = "JojoDataSources"
-            ReferencedContainer = "container:JojoDataSources.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -65,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24DB54251ED3065C00037F14"
-            BuildableName = "JojoDataSources.framework"
-            BlueprintName = "JojoDataSources"
-            ReferencedContainer = "container:JojoDataSources.xcodeproj">
+            BuildableName = "Dahab.framework"
+            BlueprintName = "Dahab"
+            ReferencedContainer = "container:Dahab.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +64,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24DB54251ED3065C00037F14"
-            BuildableName = "JojoDataSources.framework"
-            BlueprintName = "JojoDataSources"
-            ReferencedContainer = "container:JojoDataSources.xcodeproj">
+            BuildableName = "Dahab.framework"
+            BlueprintName = "Dahab"
+            ReferencedContainer = "container:Dahab.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
