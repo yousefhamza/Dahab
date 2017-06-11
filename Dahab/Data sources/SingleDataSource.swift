@@ -69,11 +69,19 @@ public class SingleDataSource<CellElement: UITableViewCell, ModelElement>: NSObj
 
         tableView.register(CellElement.self, forCellReuseIdentifier: cellIdentifier)
         tableView.reloadData()
+
+        for view in tableView.subviews {
+            if view.isKind(of: UIRefreshControl.classForCoder()) {
+                view.removeFromSuperview()
+            }
+        }
+        tableView.addSubview(refreshControl())
     }
 
     public func loadData() {
         currentState = .Loading
         loadDataBlock?({ (loadedModels, error) -> Void in
+
             if let newModels = loadedModels {
                 self.models = newModels
 
@@ -95,6 +103,21 @@ public class SingleDataSource<CellElement: UITableViewCell, ModelElement>: NSObj
     // Mark: Message state delegate
     func retry() {
         loadData()
+    }
+
+    // Mark: Refresh control
+    func refreshControl() -> UIRefreshControl {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+        return refreshControl
+    }
+
+    // Mark : Refresh control delegate
+    func refresh(_ refreshController: UIRefreshControl) {
+        retry()
+        DispatchQueue.main.async {
+            refreshController.endRefreshing()
+        }
     }
 
     // Mark: TableView Data Source

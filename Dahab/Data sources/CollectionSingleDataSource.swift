@@ -59,6 +59,14 @@ public class CollectionSingleDataSource<CellElement: UICollectionViewCell, Model
         
         collectionView.register(CellElement.self, forCellWithReuseIdentifier: cellIdentifier)
         collectionView.reloadData()
+
+        
+        for view in collectionView.subviews {
+            if view.isKind(of: UIRefreshControl.classForCoder()) {
+                view.removeFromSuperview()
+            }
+        }
+        collectionView.addSubview(refreshControl())
     }
     
     public func loadData() {
@@ -85,6 +93,21 @@ public class CollectionSingleDataSource<CellElement: UICollectionViewCell, Model
     // Mark: Message state delegate
     func retry() {
         loadData()
+    }
+
+    // Mark: Refresh control
+    func refreshControl() -> UIRefreshControl {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+        return refreshControl
+    }
+    
+    // Mark : Refresh control delegate
+    func refresh(_ refreshController: UIRefreshControl) {
+        retry()
+        DispatchQueue.main.async {
+            refreshController.endRefreshing()
+        }
     }
     
     //Mark: TableView Data Source
