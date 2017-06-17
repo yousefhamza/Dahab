@@ -36,9 +36,9 @@ public class SingleDataSource<CellElement: UITableViewCell, ModelElement>: NSObj
 
             switch currentState {
                 case .Empty:
-                    tableView.backgroundView = MessageStateView(withMessage: "No entries found.", messageImage: nil, delegate: self)
+                    tableView.backgroundView = MessageStateView(withMessage: "No data is available right now, please try again later.", messageImage: nil, delegate: self)
                 case .Error:
-                    tableView.backgroundView = MessageStateView(withMessage: "Error happened, we couldn't reach the server", messageImage: nil, delegate: self)
+                    tableView.backgroundView = MessageStateView(withMessage: "Something wrong happened, please try again later", messageImage: nil, delegate: self)
                 case .Loading:
                     tableView.backgroundView = LoadingIndicator(withTitle: "Loading...")
                 default:
@@ -114,8 +114,10 @@ public class SingleDataSource<CellElement: UITableViewCell, ModelElement>: NSObj
 
     // Mark : Refresh control delegate
     func refresh(_ refreshController: UIRefreshControl) {
+        models = []
         retry()
         DispatchQueue.main.async {
+            self.tableView.reloadData()
             refreshController.endRefreshing()
         }
     }

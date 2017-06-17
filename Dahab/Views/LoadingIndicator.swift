@@ -22,6 +22,7 @@ class LoadingIndicator: UIView {
 
     init(withAttributedTitle attributedTitle: NSAttributedString) {
         loadingTitle.attributedText = attributedTitle
+        activityIndicator.activityIndicatorViewStyle = .gray
 
         super.init(frame: .zero)
 
@@ -38,7 +39,6 @@ class LoadingIndicator: UIView {
             make.centerX.centerY.equalTo(self)
             make.left.greaterThanOrEqualTo(self).offset(30)
             make.right.lessThanOrEqualTo(self).offset(-30)
-            print("frame: \(self.frame)")
         }
 
         activityIndicator.snp.makeConstraints { (make) in

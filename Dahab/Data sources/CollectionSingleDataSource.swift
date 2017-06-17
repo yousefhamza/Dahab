@@ -104,8 +104,10 @@ public class CollectionSingleDataSource<CellElement: UICollectionViewCell, Model
     
     // Mark : Refresh control delegate
     func refresh(_ refreshController: UIRefreshControl) {
+        models = []
         retry()
         DispatchQueue.main.async {
+            self.collectionView.reloadData()
             refreshController.endRefreshing()
         }
     }

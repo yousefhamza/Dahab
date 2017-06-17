@@ -45,7 +45,9 @@ class MessageStateView: UIView {
 
         super.init(frame: .zero)
 
-        addSubview(messageImageView)
+        if let _  = messageImageView.image {
+            addSubview(messageImageView)
+        }
         addSubview(messageLabel)
         addSubview(retryButton)
 
@@ -64,11 +66,12 @@ class MessageStateView: UIView {
             make.left.greaterThanOrEqualTo(self).offset(30)
             make.right.lessThanOrEqualTo(self).offset(-30)
         }
-
-        messageImageView.snp.makeConstraints { (make) in
-            make.centerY.equalTo(self)
-            make.bottom.equalTo(messageLabel.snp.top).offset(10)
-            make.top.greaterThanOrEqualTo(self).offset(10)
+        if let _  = messageImageView.image {
+            messageImageView.snp.makeConstraints { (make) in
+                make.centerY.equalTo(self)
+                make.bottom.equalTo(messageLabel.snp.top).offset(10)
+                make.top.greaterThanOrEqualTo(self).offset(10)
+            }
         }
 
         retryButton.snp.makeConstraints { (make) in

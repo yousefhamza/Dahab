@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         singleDataSource = SingleDataSource<UITableViewCell, String>(withTableView: tableView, cellIdentifier: "cellIdentifier")
         singleDataSource.loadDataBlock = { (callBack: @escaping ([String]?, NSError?) -> Void) in
             sleep(3)
-            callBack(["A", "B", "C", "D", "E", "F"], nil)
+            callBack([], nil)
         }
         
         singleDataSource.configureCellForRow = { (cell: UITableViewCell, model: String) in
