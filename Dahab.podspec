@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Dahab"
-  s.version      = "0.2"
+  s.version      = "0.2.1"
   s.homepage    = "http://google.com"
   s.summary      = "An abstraction for resusable tableviews"
   s.license      = { :type => 'BSD' }
