@@ -20,7 +20,7 @@ public class SingleDataSource<CellElement: UITableViewCell, ModelElement>: NSObj
     
     private var models: [ModelElement]
     public var didSelectRow: ((ModelElement, CellElement) -> Void)?
-    public var configureCellForRow: ((CellElement, ModelElement) -> Void)?
+    public var configureCellForRow: ((CellElement, ModelElement, IndexPath) -> Void)?
     public var loadDataBlock: ( (@escaping ([ModelElement]?, NSError?) -> Void) -> Void)?
 
     let tableView: UITableView
@@ -135,7 +135,7 @@ public class SingleDataSource<CellElement: UITableViewCell, ModelElement>: NSObj
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? CellElement
         let model = models[indexPath.row]
-        configureCellForRow?(cell!, model)
+        configureCellForRow?(cell!, model, indexPath)
         cell?.selectionStyle = .none
         return cell!
     }

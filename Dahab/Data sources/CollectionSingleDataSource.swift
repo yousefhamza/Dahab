@@ -12,7 +12,7 @@ public class CollectionSingleDataSource<CellElement: UICollectionViewCell, Model
     
     private var models: [ModelElement]
     public var didSelectRow: ((ModelElement) -> Void)?
-    public var configureCellForRow: ((CellElement, ModelElement) -> Void)?
+    public var configureCellForRow: ((CellElement, ModelElement, IndexPath) -> Void)?
     public var loadDataBlock: ( (@escaping ([ModelElement]?, NSError?) -> Void) -> Void)?
     
     let collectionView: UICollectionView
@@ -125,7 +125,7 @@ public class CollectionSingleDataSource<CellElement: UICollectionViewCell, Model
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? CellElement
         let model = models[indexPath.item]
-        configureCellForRow?(cell!, model)
+        configureCellForRow?(cell!, model, indexPath)
         return cell!
     }
     
